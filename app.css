@@ -45,6 +45,7 @@ p {
   background-color: transparent;
   border: 1px solid var(--neutral-light-gray);
   color: var(--neutral-light-gray);
+  font-family: var(--body-font);
   text-transform: uppercase;
   cursor: pointer;
   letter-spacing: 2px;
@@ -52,6 +53,7 @@ p {
 
 .container {
   width: 86%;
+  max-width: 1400px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -62,6 +64,10 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+}
+
+.desktop-main-nav {
+  display: none;
 }
 
 .nav-btn {
@@ -173,6 +179,10 @@ p {
   margin-bottom: 50px;
 }
 
+.intro-image {
+  display: none;
+}
+
 .different {
   text-align: center;
   padding: 150px 0;
@@ -244,14 +254,18 @@ p {
   left: 0;
 }
 
+.main-footer .social {
+  border-bottom: 1px solid var(--neutral-gray-violet);
+}
+
 .main-footer .socials {
   margin-top: 25px;
-  border-bottom: 1px solid var(--neutral-gray-violet);
   padding-bottom: 30px;
 }
 
 .main-footer .social-icons {
   margin: 0 5px;
+  cursor: pointer;
 }
 
 .main-footer .main-footer-links {
@@ -293,4 +307,198 @@ p {
 }
 .attribution a {
   color: var(--primary-blue);
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 80%;
+  }
+
+  .desktop-main-nav {
+    display: flex;
+  }
+
+  .desktop-main-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .desktop-main-nav li {
+    padding: 0 12px;
+  }
+
+  .desktop-main-nav a {
+    text-decoration: none;
+    color: var(--neutral-gray-violet);
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+
+  .desktop-main-nav a:hover {
+    color: var(--neutral-dark-violet);
+    font-weight: 600;
+  }
+
+  .desktop-main-nav .btn {
+    border-color: var(--primary-dark-violet);
+    color: var(--primary-dark-violet);
+    font-weight: 600;
+    margin-left: 1rem;
+    padding: 12px 24px;
+  }
+
+  .desktop-main-nav .btn:hover {
+    color: var(--neutral-light-gray);
+    background-color: var(--neutral-dark-violet);
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .showcase {
+    display: none;
+  }
+
+  .intro {
+    text-align: left;
+    position: relative;
+    padding: 150px 0 0;
+    height: 680px;
+  }
+
+  .intro::before {
+    content: url(images/bg-pattern-intro-left-desktop.svg);
+    top: 510px;
+  }
+
+  .intro::after {
+    content: url(images/bg-pattern-intro-right-desktop.svg);
+    z-index: 1;
+    bottom: 0px;
+    top: 0;
+    right: -50px;
+  }
+
+  .intro .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .welcome {
+    width: 50%;
+    max-width: 600px;
+  }
+
+  .desktop-border {
+    border-top: 1px solid var(--neutral-light-gray);
+    width: 170px;
+    margin-bottom: 4rem;
+  }
+
+  .intro .intro-heading {
+    font-size: 5rem;
+    line-height: 1;
+  }
+
+  .intro .btn {
+    width: 30%;
+  }
+
+  .intro .btn:hover,
+  .about .btn:hover {
+    background-color: var(--neutral-light-gray);
+    color: var(--neutral-dark-violet);
+    font-weight: 600;
+  }
+
+  .intro-image {
+    display: block;
+    position: absolute;
+    right: -0;
+    top: 0;
+  }
+
+  .different {
+    text-align: left;
+    padding-top: 350px;
+  }
+
+  .different .different-heading {
+    font-size: 4rem;
+  }
+
+  .different .different-heading span {
+    border-top: 1px solid var(--primary-dark-violet);
+    padding-top: 30px;
+  }
+
+  .different .cards {
+    display: flex;
+    margin-top: 80px;
+    margin-bottom: 70px;
+  }
+
+  .different .card {
+    text-align: left;
+    align-items: start;
+    margin-right: 30px;
+  }
+
+  .about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about::after {
+    content: url(images/bg-pattern-how-we-work-desktop.svg);
+  }
+
+  .about .about-heading {
+    margin: 0;
+    font-size: 3rem;
+    width: 46%;
+    line-height: 1;
+  }
+
+  .main-footer {
+    padding-top: 30px;
+  }
+
+  .main-footer::before {
+    content: url(images/bg-pattern-footer-desktop.svg);
+  }
+
+  .main-footer .social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-footer .main-footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 150px;
+  }
+
+  .main-footer-links .topic {
+    text-align: left;
+  }
+
+  .main-footer-links .topic h2 {
+    margin: 20px 0;
+  }
+
+  .social-icons:hover path {
+    fill: var(--neutral-dark-violet);
+  }
+
+  .footer-nav a:hover {
+    text-decoration: underline;
+  }
 }
